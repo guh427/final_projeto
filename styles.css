@@ -66,6 +66,7 @@
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .jogador:hover {
@@ -85,4 +86,45 @@
   background: #222;
   color: white;
   margin-top: 30px;
+}
+
+/* --- Modal (popup dos jogadores) --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+}
+
+.close:hover {
+  color: red;
 }
