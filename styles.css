@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fafafa;
+}
+
+header {
+  background: #0057b8; /* azul */
+  color: #ffd100;      /* amarelo */
+  text-align: center;
+  padding: 1rem;
+}
+
+.banner {
+  height: 250px;
+  background: url('imagens/fundo.jpg') center/cover no-repeat;
+}
+
+.players {
+  padding: 2rem;
+  text-align: center;
+}
+
+.players h2 {
+  margin-bottom: 1.5rem;
+  color: #0057b8;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+}
+
+.player-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
