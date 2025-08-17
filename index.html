@@ -1,57 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto Vôlei do Gustavo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time de Vôlei</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-image: url("imagens/banner.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .jogadores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .jogador {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .jogador img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .jogador h3 {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Time de Vôlei</h1>
+    </header>
 
-  <!-- Banner inicial -->
-  <header class="banner">
-    <div class="banner-conteudo">
-      <h1>Projeto Vôlei do Gustavo</h1>
-      <p>Um espaço para celebrar os grandes jogadores e minha paixão pelo vôlei</p>
+    <div class="container">
+        <div class="jogadores">
+            <div class="jogador">
+                <img src="imagens/nishida.jpg" alt="Yuji Nishida">
+                <h3>Yuji Nishida</h3>
+            </div>
+            <div class="jogador">
+                <img src="imagens/ishikawa.jpg" alt="Yuri Ishikawa">
+                <h3>Yuri Ishikawa</h3>
+            </div>
+            <div class="jogador">
+                <img src="imagens/darlan.jpg" alt="Darlan Souza">
+                <h3>Darlan Souza</h3>
+            </div>
+            <div class="jogador">
+                <img src="imagens/nikolov.jpg" alt="Simeon Nikolov">
+                <h3>Simeon Nikolov</h3>
+            </div>
+        </div>
     </div>
-  </header>
-
-  <!-- Seção de jogadores -->
-  <section class="jogadores">
-    <h2>Jogadores que me inspiram</h2>
-    <div class="jogadores-lista">
-
-      <div class="jogador">
-        <img src="imagens/nishida.jpg" alt="Yuji Nishida">
-        <h3>Yuji Nishida</h3>
-        <p>Um dos maiores atacantes japoneses, conhecido pelo seu salto impressionante e potência nos ataques.</p>
-      </div>
-
-      <div class="jogador">
-        <img src="imagens/ichikawa.jpg" alt="Yuri Ichikawa">
-        <h3>Yuri Ichikawa</h3>
-        <p>Destaque no voleibol japonês, sempre demonstrando técnica refinada e dedicação ao esporte.</p>
-      </div>
-
-      <div class="jogador">
-        <img src="imagens/darlan.jpg" alt="Darlan Souza">
-        <h3>Darlan Souza</h3>
-        <p>Atacante brasileiro promissor, com muita força e precisão, representando a nova geração do vôlei.</p>
-      </div>
-
-      <div class="jogador">
-        <img src="imagens/nikolov.jpg" alt="Simeon Nikolov">
-        <h3>Simeon Nikolov</h3>
-        <p>Talento internacional que vem se destacando no vôlei europeu, referência em técnica e visão de jogo.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="rodape">
-    <p>Feito com ❤️ por Gustavo</p>
-  </footer>
-
 </body>
 </html>
