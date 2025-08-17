@@ -1,90 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time de Vôlei</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time de Vôlei</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-        header {
-            background-image: url("imagens/banner.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 4px #000;
-        }
+    header {
+      background-image: url("imagens/banner.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh; /* ocupa a tela toda */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      position: relative;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-        }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
+    /* Setinha para baixo */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      animation: bounce 1.5s infinite;
+    }
 
-        .jogadores {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(10px);
+      }
+      60% {
+        transform: translateY(5px);
+      }
+    }
 
-        .jogador {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            padding: 15px;
-            text-align: center;
-            width: 200px;
-        }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
 
-        .jogador img {
-            width: 100%;
-            border-radius: 10px;
-        }
+    .jogadores {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
-        .jogador h3 {
-            margin: 10px 0 0 0;
-            font-size: 1.2rem;
-        }
-    </style>
+    .jogador {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 15px;
+      text-align: center;
+      width: 200px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .jogador:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .jogador img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .jogador h3 {
+      margin: 10px 0 0 0;
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Time de Vôlei</h1>
-    </header>
+  <header>
+    <h1>Time de Vôlei</h1>
+    <a href="#jogadores" class="scroll-down">⬇</a>
+  </header>
 
-    <div class="container">
-        <div class="jogadores">
-            <div class="jogador">
-                <img src="imagens/nishida.jpg" alt="Yuji Nishida">
-                <h3>Yuji Nishida</h3>
-            </div>
-            <div class="jogador">
-                <img src="imagens/ishikawa.jpg" alt="Yuri Ishikawa">
-                <h3>Yuri Ishikawa</h3>
-            </div>
-            <div class="jogador">
-                <img src="imagens/darlan.jpg" alt="Darlan Souza">
-                <h3>Darlan Souza</h3>
-            </div>
-            <div class="jogador">
-                <img src="imagens/nikolov.jpg" alt="Simeon Nikolov">
-                <h3>Simeon Nikolov</h3>
-            </div>
-        </div>
+  <div class="container" id="jogadores">
+    <div class="jogadores">
+      <div class="jogador">
+        <img src="imagens/nishida.jpg" alt="Yuji Nishida">
+        <h3>Yuji Nishida</h3>
+      </div>
+      <div class="jogador">
+        <img src="imagens/ishikawa.jpg" alt="Yuki Ishikawa">
+        <h3>Yuki Ishikawa</h3>
+      </div>
+      <div class="jogador">
+        <img src="imagens/darlan.jpg" alt="Darlan Souza">
+        <h3>Darlan Souza</h3>
+      </div>
+      <div class="jogador">
+        <img src="imagens/nikolov.jpg" alt="Simeon Nikolov">
+        <h3>Simeon Nikolov</h3>
+      </div>
     </div>
+  </div>
 </body>
 </html>
